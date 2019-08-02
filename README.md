@@ -9,3 +9,7 @@ ada beberapa proses yang harus dilakukan untuk pengambilan dana di SDIT,
 4. [keuangan] pada saat memberikan dana harus mengisi didalam sistem siapa yang mengambil dana, data tersebut akan direkam dan di store ke databse berupa waktu dan pengambil dana.
 5. [maker] harus melaporkan pertanggungjawaban keuangan kepada [keuangan]. [keuangan] berdasarkan laporan tersebut didukung dengan bukti pembayaran menginput laporan kedalam sistem dan meng-upload bukti pembelanjaan.
 6. [maker] dapat melihat riwayat pengajuan didasbord riwayat. informasi yang ditampilkan adalah track record waktu, nominal dan pengambil dana serta pelapor dana dan bukti fisik dalam file pdf yang diupload [maker]
+
+
+# notif ke setiap user
+saya menggunakan Whats App gateway untuk memberikan notifikasi kepada setiap user yang nerhubungan dengan setiap proses pengajuan dana. saya sudah menggunakan 2 penyedia (www.capiwha.com) dan (www.wablas.com).
