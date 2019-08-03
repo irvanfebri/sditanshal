@@ -156,16 +156,29 @@ function aksesprint($kode){
 
 
 function sendwa ($nohp,$pesan){
-        $my_apikey = "V5DMO9Z2U3JFXOPV7H0H"; 
-        $destination = $nohp; 
-        $message = "$pesan"; 
-        $api_url = "http://panel.capiwha.com/send_message.php"; 
-        $api_url .= "?apikey=". urlencode ($my_apikey); 
-        $api_url .= "&number=". urlencode ($destination); 
-        $api_url .= "&text=". urlencode ($message); 
-        $my_result_object = json_decode(file_get_contents($api_url, false));
+        $curl = curl_init();
+        $token = "nBm6qYQIyzBH9hDC3jPNEHNlM0E8fQrwauSWpS3vpJ17tmXlKKnZgjbmxtk2GuhS";
+        $data = [
+            'phone' => "$nohp",
+            'message' => "$pesan",
+        ];
         
-        return $my_result_object;
+        curl_setopt($curl, CURLOPT_HTTPHEADER,
+            array(
+                "Authorization: $token",
+            )
+        );
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($curl, CURLOPT_URL, "https://wablas.com/api/send-message");
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+        $result = curl_exec($curl);
+        curl_close($curl);
+        
+        echo "<pre>";
+        print_r($result);
 }
 
 ?>
