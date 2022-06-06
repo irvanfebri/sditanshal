@@ -38,7 +38,7 @@ cookieLogin02($_COOKIE['id']);
             <?php
                 //prosesan terakhir untuk mengecheak apakah semua data terisi jika terisi masukan kedalam database.    
                 if (!empty($_POST['keteranganpengaju']) and ($_POST['nominalpengaju'] >= 0)){
-                
+             
                 
                 //memberikan divisi pengaju
                 $query = "SELECT divisi FROM `kegiatan-divisi` WHERE kegiatan = '$_POST[kegiatanpengaju]'";
@@ -50,10 +50,10 @@ cookieLogin02($_COOKIE['id']);
                 mysqli_free_result ($mysql);
                 
                 //masukan kedatabase
-                $query02 = "INSERT INTO stepchecker (kode,noid,nama,kegiatan,divisi,keterangan,nominal,waktu,step) VALUES
+                $query02 = "INSERT INTO stepchecker (kode,noid,nama,kegiatan,divisi,keterangan,nominal,waktu,catatan,nominal2,pengambildana,waktupengambildana,pelapor,waktumelapor,realisasi,step) VALUES
                 ('$_POST[kodepengaju]','$_POST[noidpengaju]','$_POST[namapengaju]','$_POST[kegiatanpengaju]'
                 ,'$_POST[divisipengaju]','$_POST[keteranganpengaju]','$_POST[nominalpengaju]','$_POST[waktupengaju]'
-                ,'$_POST[steppengaju]')";
+                ,'',0,'',0,'',0,0, '$_POST[steppengaju]')";
                 
                 //notifikasi jika sudah masuk kedalam datbase
                 if ($mysql02 = mysqli_query ($koneksi,$query02)){
