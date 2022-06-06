@@ -168,7 +168,8 @@ if (isset($_COOKIE['id']) and isset($_COOKIE['akses'])){
 </head>
 <body>
     <div class="login-page">
-        <div class="form">          
+        <div class="form"> 
+          <h1>Form Pengajuan Dana</h1>        
             <form action="index.php" method="post">
                 <input type="text" name="user" value="" placeholder=" Username ">
                 <input type="password" name="password" value="" placeholder=" Password ">
