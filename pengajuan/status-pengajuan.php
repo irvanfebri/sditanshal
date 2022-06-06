@@ -94,7 +94,7 @@ $mysql = mysqli_query ($koneksi,$query);
                                 echo "</form>";
                                 break;
                             case "report":
-                                echo "<form method=post action=laporan.php>";
+                                echo "<form method=post action=../aksespengajuan/laporan.php>";
                                 echo "<td>";
                                 echo "Dana sudah diambil, lapor jika kegiatan sudah selesai<hr>";
                                 echo "<input name=kode value=$result[kode] hidden>";

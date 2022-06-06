@@ -6,9 +6,9 @@ Untuk data base host dapat disesuaikan dengan alamat ip yang
 dijadikan statik dikomputer yang dijadikan sebuah host local
 di area network
 */
-$host = "192.168.1.201";
-$uname = "farras";
-$pass = "farrasmuhammad";
+$host = "localhost";
+$uname = "root";
+$pass = "Lesehan24";
 $db = "pengajuan";
 $koneksi = mysqli_connect ($host,$uname,$pass,$db);
 
